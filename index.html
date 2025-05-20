@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">MAYAS</div>
+    <nav id="nav">
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
@@ -20,39 +18,19 @@
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Maame Yaa Akoto-Sampong</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
+    
     <section id="profile">
       <div class="section__pic-container">
         <img src="assets/profile pic.jpg" alt="Maya profile picture" />
       </div>
       <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
+        <p class="section__text__p1">Hello, I am</p>
         <h1 class="title">Maame Yaa Akoto-Sampong</h1>
-        <p class="section__text__p2">Frontend Developer</p>
+        <p class="section__text__p2">Web Developer</p>
         <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('')"
-          >
-            Download CV
-          </button>
+          <a href="assets/Maame Yaa Akoto RESUME.pdf" target="_blank" class="btn btn-color-2">View CV</a>
           <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
+            CONTACT INFO
           </button>
         </div>
         <div id="socials-container">
@@ -83,7 +61,7 @@
                 class="icon"
               />
               <h3>Experience</h3>
-              <p>Two weeks<br />Frontend Development</p>
+              <p>Two weeks<br />Web Development</p>
             </div>
             <div class="details-container">
               <img
@@ -97,28 +75,21 @@
           </div>
           <div class="text-container">
             <p>
-               I am a new developer passionate about building websites that combine appealing design with solid code. Even though I'm just two weeks into my web development journey, I'm already excited by the prospect of creating interfaces that are both visually attractive and functionally sound.
-Currently, I'm learning front-end development fundamentals, focusing on HTML, CSS, and JavaScript. Each day brings new discoveries as I build my skills in creating responsive layouts and interactive elements that form the foundation of modern websites.
+               I am a new developer passionate about building websites that combine appealing design with solid code. Even though I am just two weeks into my web development journey, I am already excited by the prospect of creating interfaces that are both visually attractive and functionally sound.
+Currently, I am learning front-end development fundamentals, focusing on HTML, CSS, and JavaScript. Each day brings new discoveries as I build my skills in creating responsive layouts and interactive elements that form the foundation of modern websites.
 Prior to this career pivot, I have explored various interests that have shaped my perspective and problem-solving approach. These experiences have given me a unique lens through which I approach design challenges and user experience considerations.
-In my spare time, you can find me watching anime.
+In my spare time, you can find me watching anime or videos about cars.
               </p>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
+  
     </section>
     <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
+      <h1 class="title">SKILLS</h1>
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
             <div class="article-container">
               <article>
                 <img
@@ -183,73 +154,58 @@ In my spare time, you can find me watching anime.
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src=""
+                src="assets/rsvp form.png"
                 alt="Project 1"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
+            <h2 class="experience-sub-title project-title">RSVP FORM</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/mayas-spec/Wedding-RSVP-form'"
               >
                 Github
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
+
             </div>
           </div>
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src=""
+                src="assets/wedding invite.png"
                 alt="Project 2"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <h2 class="experience-sub-title project-title">Wedding Invitation Card</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/mayas-spec/Invitation-Card'"
               >
                 Github
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
+              
             </div>
           </div>
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src=""
+                src="assets/airbnb.png"
                 alt="Project 3"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <h2 class="experience-sub-title project-title">Maya Homes</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/mayas-spec/Pension-plan'"
               >
                 Github
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
+    
             </div>
           </div>
         </div>

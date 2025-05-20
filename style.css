@@ -1,7 +1,5 @@
-/* GENERAL */
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
+/* General */
 * {
   margin: 0;
   padding: 0;
@@ -9,39 +7,25 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color:#102542 ;
+  background-color:darkgrey;
 }
-
-html {
-  scroll-behavior: smooth;
-}
-
-p {
-  color: rgb(85, 85, 85);
-}
-
-/* TRANSITION */
-
-a,
-.btn {
-  transition: all 300ms ease;
-}
-
-/* DESKTOP NAV */
-
-nav,
-.nav-links {
-  display: flex;
-}
-
-nav {
+/* Nav Section */
+#nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   justify-content: space-evenly;
   align-items: center;
   height: 17vh;
   color: white;
+  border: 2px solid #3333 ;
+  box-shadow: 0 2px 10px rgba(0, 0, 0 ,0.1);
 }
 
+#nav,
 .nav-links {
+  display: flex;
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
@@ -50,101 +34,15 @@ nav {
 a {
   color: black;
   text-decoration: none;
-  text-decoration-color:goldenrod;
-}
-
-a:hover {
-  color: goldenrod;
-  text-decoration: underline;
-  text-underline-offset: 1rem;
   
 }
 
-.logo {
-  font-size: 2rem;
-  font-style: italic;
+a:hover {
+  color:red;
+  
 }
 
-/* HAMBURGER MENU */
-
-#hamburger-nav {
-  display: none;
-}
-
-.hamburger-menu {
-  position: relative;
-  display: inline-block;
-}
-
-.hamburger-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 24px;
-  width: 30px;
-  cursor: pointer;
-}
-
-.hamburger-icon span {
-  width: 100%;
-  height: 2px;
-  background-color: black;
-  transition: all 0.3 ease-in-out;
-}
-
-.menu-links {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: white;
-  width: fit-content;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3 ease-in-out;
-}
-
-.menu-links a {
-  display: block;
-  padding: 10px;
-  text-align: center;
-  font-size: 1.5rem;
-  color: black;
-  text-decoration: none;
-  transition: all 0.3 ease-in-out;
-}
-
-
-
-.menu-links.open {
-  max-height: 300px;
-}
-
-.hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
-}
-
-.hamburger-icon.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(10px, -5px);
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-/* SECTIONS */
-
+/* Profile */
 section {
   padding-top: 4vh;
   height: 96vh;
@@ -152,18 +50,16 @@ section {
   box-sizing: border-box;
   min-height: fit-content;
 }
-
 .section-container {
   display: flex;
 }
-
-/* PROFILE SECTION */
 
 #profile {
   display: flex;
   justify-content: center;
   gap: 5rem;
   height: 80vh;
+  padding-top: 8rem;
 }
 
 .section__pic-container {
@@ -179,7 +75,8 @@ section {
 }
 
 .section__text p {
-  font-weight: 600;
+  font-weight: 500;
+  color: azure;
 }
 
 .section__text__p1 {
@@ -195,37 +92,11 @@ section {
   font-size: 3rem;
   text-align: center;
 }
-
-#socials-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  gap: 1rem;
-}
-
-/* ICONS */
-
-.icon {
-  cursor: pointer;
-  height: 2rem;
-}
-
-/* BUTTONS */
-
 .btn-container {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
-
-.btn {
-  font-weight: 600;
-  transition: all 300ms ease;
-  padding: 1rem;
-  width: 8rem;
-  border-radius: 2rem;
-}
-
 .btn-color-1,
 .btn-color-2 {
   border: rgb(53, 53, 53) 0.1rem solid;
@@ -239,7 +110,7 @@ section {
 .btn-color-1,
 .btn-color-2:hover {
   background: rgb(53, 53, 53);
-  color: white;
+  color:#ff3366;
 }
 
 .btn-color-1:hover {
@@ -254,16 +125,31 @@ section {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-.btn-container {
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
   gap: 1rem;
 }
 
-/* ABOUT SECTION */
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
 
 #about {
   position: relative;
 }
 
+/* ABOUT SECTION */
 .about-containers {
   gap: 2rem;
   margin-bottom: 2rem;
@@ -280,15 +166,6 @@ section {
   display: flex;
 }
 
-.about-pic {
-  border-radius: 2rem;
-}
-
-.arrow {
-  position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
-}
 
 .details-container {
   padding: 1.5rem;
@@ -300,29 +177,17 @@ section {
   text-align: center;
 }
 
-.section-container {
-  gap: 4rem;
-  height: 80%;
+.text-container{
+  color:black;
+  font-size: 16px;
+  font-weight: 600;
 }
 
-.section__pic-container {
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
-}
-
-/* EXPERIENCE SECTION */
-
+/* Experience section */
 #experience {
   position: relative;
 }
 
-.experience-sub-title {
-  color: rgb(85, 85, 85);
-  font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
-}
 
 .experience-details-container {
   display: flex;
@@ -350,8 +215,7 @@ article .icon {
   cursor: default;
 }
 
-/* PROJECTS SECTION */
-
+/* HANDIWORK */
 #projects {
   position: relative;
 }
@@ -377,8 +241,7 @@ article .icon {
   border-color: rgb(163, 163, 163);
 }
 
-/* CONTACT */
-
+/* FR3 ME */
 #contact {
   display: flex;
   justify-content: center;
@@ -417,8 +280,8 @@ article .icon {
   height: 2.5rem;
 }
 
-/* FOOTER SECTION */
 
+/* DOWN */
 footer {
   height: 26vh;
   margin: 0 1rem;
